@@ -7,7 +7,7 @@ To clone and run the app you'll need [Git](https://git-scm.com) and [Node.js](ht
 
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/DavidD121/LucidGloves-Test-Interface.git
 # Go into the repository
 cd lucidglove-test-interface
 # Install node dependencies
