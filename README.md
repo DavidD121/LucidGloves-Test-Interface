@@ -3,7 +3,7 @@ A testing interface that runs on desktop and visualizes a VR hand with no need f
 
 ## To Use
 
-To clone and run the app you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) installed on your computer. Once installed, run the follwing from your command line:
+To clone and run the app you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) installed on your computer. Once installed, run the following from your command line:
 
 ```bash
 # Clone the repository
