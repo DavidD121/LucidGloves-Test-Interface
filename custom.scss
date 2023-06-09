@@ -1,0 +1,15 @@
+// import MUI colors
+@import "bower_components/mui/src/sass/mui/colors";
+
+// customize MUI variables
+$mui-include-globals:	false;
+
+$mui-btn-default-font-color:	mui-color('black');
+
+$mui-base-font-color:	mui-color('white');
+
+$mui-label-font-color:	mui-color('white');
+
+$mui-input-placeholder-color:	rgba(mui-color('white'), 0.50);
+// import MUI SASS
+@import "bower_components/mui/src/sass/mui";

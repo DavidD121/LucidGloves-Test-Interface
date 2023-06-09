@@ -1,0 +1,29 @@
+{
+  "name": "lucidglove-test-interface",
+  "version": "1.0.0",
+  "description": "A minimal Electron application with node serialport",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serialport/electron-serialport.git"
+  },
+  "keywords": [
+    "Electron",
+    "Test",
+    "VR"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^17.0.0"
+  },
+  "dependencies": {
+    "muicss": "^0.10.3",
+    "sass": "^1.63.2",
+    "serialport": "^10.3.0",
+    "three": "^0.153.0"
+  }
+}

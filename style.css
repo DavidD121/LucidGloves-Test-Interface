@@ -1,0 +1,85 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.ui-container {
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.ui-element {
+  position: relative;
+  z-index: 2;
+
+  background-color: rgba(79, 79, 79, 0.326);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 25px;
+}
+
+.title {
+  width: fit-content;
+}
+
+.hand-select {
+  width: 175px;
+}
+
+.hand-select-radio {
+  height: 17px;
+  width: 17px;
+  margin: 10px;
+}
+
+input {
+  margin: 15px;
+}
+
+.communication {
+  color: white;
+  width: 250px;
+}
+
+.slider {
+  right: 25px;
+}
+
+.navbar {
+  margin: 10px;
+}
+
+.nav-link {
+  margin: 10px;
+}
+
+h3 {
+  margin: 5px;
+}
