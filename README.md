@@ -1,5 +1,5 @@
 # LucidGloves Testing Interface
-A testing interface that runs on desktop and visualizes a VR hand with no need for a VR headset. Created using Electrion, Three.js and SerialPort.
+A LucidGloves testing interface that runs on desktop and visualizes a VR hand with no need for a VR headset. Created using Electrion, Three.js and SerialPort.
 
 ## To Use
 
