@@ -38,7 +38,6 @@
 .ui-element {
   position: relative;
   z-index: 2;
-
   background-color: rgba(79, 79, 79, 0.326);
   border-radius: 10px;
   padding: 20px;
@@ -47,6 +46,10 @@
 
 .title {
   width: fit-content;
+}
+
+.options {
+  height: 525px;
 }
 
 .hand-select {
@@ -72,12 +75,15 @@ input {
   right: 25px;
 }
 
-.navbar {
-  margin: 10px;
-}
-
-.nav-link {
-  margin: 10px;
+.serial-error {
+  display: none;
+  color: red;
+  font-weight: bold;
+  width: 300px;
+  left: 250px;
+  bottom: 215px;
+  padding: 10px;
+  background-color: transparent;
 }
 
 h3 {
