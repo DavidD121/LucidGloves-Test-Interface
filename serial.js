@@ -9,23 +9,6 @@ let rightSerialPortName = "";
 let leftSerialPort;
 let rightSerialPort;
 
-document.getElementById("savePorts").addEventListener("click", async () => {
-  if(rightSerialPort) {
-    await rightSerialPort.close();
-    console.log("closing rightSerialPort");
-    rightSerialPort = null;
-  };
-  
-  if(leftSerialPort) {
-    await leftSerialPort.close();
-    console.log("closing leftSerialPort");
-    leftSerialPort = null;
-  }
-  
-  leftSerialPortName = document.getElementById("leftPort").value;
-  rightSerialPortName = document.getElementById("rightPort").value;
-});
-
 const ANALOG_MAX =  4096;
 
 // Objects keeping track of current finger flexion values, 0 for fully extended, ANALOG_MAX for fully closed 
@@ -75,13 +58,43 @@ function decodeFlexion(data,hand) {
   }
 }
 
+const leftSerialErrorElement = document.getElementById("leftSerialError");
+const rightSerialErrorElement = document.getElementById("rightSerialError");
+
+document.getElementById("savePorts").addEventListener("click", async () => {  
+  leftSerialErrorElement.style.display = "none";
+  rightSerialErrorElement.style.display = "none";
+  
+  if(rightSerialPort) {
+    await rightSerialPort.close();
+    console.log("closing rightSerialPort");
+    rightSerialPort = null;
+  };
+  
+  if(leftSerialPort) {
+    await leftSerialPort.close();
+    console.log("closing leftSerialPort");
+    leftSerialPort = null;
+  }
+  
+  leftSerialPortName = document.getElementById("leftPort").value;
+  rightSerialPortName = document.getElementById("rightPort").value;
+});
+
+
+function handlePortError(err, hand) {
+  const serialErrorElement = hand == "L" ? leftSerialErrorElement : rightSerialErrorElement;
+  serialErrorElement.style.display = "block";
+  serialErrorElement.textContent =  err;
+}
+
 function getPorts() {
   console.log("getting ports");
   if(!leftSerialPort && leftSerialPortName) {
     leftSerialPort = new SerialPort({
       path: leftSerialPortName,
       baudRate: 115200,
-    });
+    }, (err) => handlePortError(err, "L"));
     if(leftSerialPort) leftSerialPort.on('data', (data) => decodeFlexion(data, 'L'));
   }
   
@@ -89,7 +102,7 @@ function getPorts() {
     rightSerialPort = new SerialPort({
       path: rightSerialPortName,
       baudRate: 115200,
-    });
+    }, (err) => handlePortError(err, "R"));
     if(rightSerialPort) rightSerialPort.on('data', (data) => decodeFlexion(data, 'R'));
   }
   
