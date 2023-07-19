@@ -16,4 +16,6 @@ npm install
 npm start
 ```
 
+Once installed and running, select the hand you are using and enter the serial port of the gloves. 
+
 #### License [CC0 1.0 (Public Domain)](LICENSE.md)
